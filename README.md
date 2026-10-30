@@ -3,7 +3,7 @@
 Frontend del restaurante **American Bites**, hecho en **React + Vite**. Consume la API REST del back
 ([Bitacora_Corte2_JuanValderrama](https://github.com/juandivg26/Bitacora_Corte2_JuanValderrama)): Spring Boot, JWT, PostgreSQL y MongoDB.
 
-**Autor:** Juan Valderrama
+**Autor:** Juan Diego Valderrama Gaviria
 
 ---
 
