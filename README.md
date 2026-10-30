@@ -121,7 +121,3 @@ public/img/             ← logo, mascota y fotos de los productos
 docs/                   ← video, GIF y capturas
 ```
 
-## Créditos de imágenes
-
-- **Fotos de los productos:** [Unsplash](https://unsplash.com), con la [licencia Unsplash](https://unsplash.com/license) (uso libre, también comercial, sin atribución obligatoria). Están en `public/img/` en 800×500.
-- **Logo, mascota y banners:** tomados de los mockups de American Bites.
