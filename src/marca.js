@@ -1,6 +1,6 @@
 import { CupSoda, IceCreamCone, Package, Popcorn, Sandwich } from 'lucide-react'
 
-// Fotos de producto (recortadas de los mockups de American Bites) por nombre de plato
+// Fotos de producto (Unsplash, licencia libre) por nombre de plato
 const FOTOS = {
   'classic bite': 'classic-bite.jpg',
   'bacon deluxe': 'bacon-deluxe.jpg',
@@ -13,8 +13,9 @@ const FOTOS = {
   'chicken bites': 'chicken-bites.jpg',
   'coca-cola': 'coca-cola.jpg',
   'shake de oreo': 'shake-oreo.jpg',
+  'brownie con helado': 'brownie.jpg',
 }
-const normalizar = (t = '') => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim()
+const normalizar = (t = '') => t.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '').trim()
 export const fotoDe = (nombre) => (FOTOS[normalizar(nombre)] ? `/img/${FOTOS[normalizar(nombre)]}` : null)
 
 export const CATEGORIAS = {
