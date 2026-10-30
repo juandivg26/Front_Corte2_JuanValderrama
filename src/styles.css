@@ -1,0 +1,83 @@
+:root {
+  --rojo: #c8102e;
+  --rojo-osc: #9e0c24;
+  --crema: #fff8ef;
+  --texto: #2a1d14;
+  --gris: #6f6259;
+  --borde: #ead9c6;
+  --ok: #1f7a3d;
+  --amarillo: #f2b705;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: var(--texto);
+  background: var(--crema);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--crema); }
+
+header {
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+  padding: 14px 24px; background: var(--rojo); color: #fff;
+}
+header h1 { margin: 0; font-size: 1.5rem; }
+.usuario { display: flex; align-items: center; gap: 12px; }
+
+nav { display: flex; gap: 4px; padding: 8px 24px; background: #fff; border-bottom: 1px solid var(--borde); overflow-x: auto; }
+nav button { background: none; color: var(--texto); border-radius: 0; border-bottom: 3px solid transparent; }
+nav button:hover { background: #f6ece0; }
+nav button.activo { border-bottom-color: var(--rojo); color: var(--rojo); }
+
+main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 60px; }
+h2 { display: flex; align-items: center; gap: 12px; }
+h2 small { color: var(--gris); font-weight: normal; font-size: .9rem; }
+
+button {
+  font: inherit; cursor: pointer; border: 0; border-radius: 8px; padding: 8px 14px;
+  background: var(--rojo); color: #fff; font-weight: 600;
+}
+button:hover { background: var(--rojo-osc); }
+button:disabled { opacity: .5; cursor: not-allowed; }
+button.sec { background: #fff; color: var(--texto); border: 1px solid var(--borde); }
+button.sec:hover { background: #f6ece0; }
+button.peligro { background: #fff; color: var(--rojo); border: 1px solid var(--rojo); }
+button.link { background: none; color: var(--rojo); font-weight: normal; }
+header button.sec { background: transparent; color: #fff; border-color: #ffffff88; }
+
+input, select { font: inherit; padding: 8px 10px; border: 1px solid var(--borde); border-radius: 8px; background: #fff; min-width: 0; }
+label { display: grid; gap: 4px; font-size: .9rem; color: var(--gris); }
+
+.tarjeta { background: #fff; border: 1px solid var(--borde); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.tarjeta h3 { margin: 0 0 6px; }
+.tarjeta p { margin: 4px 0 8px; color: var(--gris); }
+.tarjeta ul { padding-left: 18px; margin: 8px 0; }
+.tarjeta small { display: block; color: var(--gris); margin-top: 4px; }
+.login { max-width: 380px; margin: 40px auto; display: grid; gap: 12px; }
+.fila { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.fila input { flex: 1 1 140px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.grid .tarjeta { margin: 0; }
+.plato strong { font-size: 1.2rem; color: var(--rojo); }
+.etiqueta { font-size: .75rem; font-weight: 700; color: var(--gris); letter-spacing: .05em; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.chips .activo { background: var(--rojo); }
+.acciones { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+td.acciones { margin: 0; }
+.vacio { color: var(--gris); }
+
+table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--borde); border-radius: 12px; overflow: hidden; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--borde); }
+th { background: #f6ece0; font-size: .85rem; }
+
+.estado { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: .78rem; font-weight: 700; background: #eee; }
+.DISPONIBLE, .ENTREGADO, .ABIERTA { background: #dff3e4; color: var(--ok); }
+.OCUPADA, .CANCELADO, .CERRADA { background: #fde2e4; color: var(--rojo); }
+.RESERVADA, .EN_PREPARACION, .EN_PAGO { background: #fff1c2; color: #7a5a00; }
+.RECIBIDO, .LISTO { background: #e2ecfd; color: #1d4ea8; }
+
+.aviso { position: fixed; right: 16px; bottom: 16px; padding: 12px 18px; border-radius: 10px; color: #fff; font-weight: 600; box-shadow: 0 4px 14px #0003; z-index: 10; }
+.aviso.ok { background: var(--ok); }
+.aviso.error { background: var(--rojo); }
+
+@media (max-width: 640px) {
+  header, nav { padding-left: 16px; padding-right: 16px; }
+  table { display: block; overflow-x: auto; }
+}
