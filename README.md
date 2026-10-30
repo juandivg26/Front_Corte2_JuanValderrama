@@ -121,16 +121,3 @@ public/img/             ← logo, mascota y fotos de los productos
 docs/                   ← video, GIF y capturas
 ```
 
-## Diseño
-
-Basado en los mockups y la guía de marca de American Bites (ver [DESIGN.md](DESIGN.md)):
-
-- **Paleta:** vino `#7A1E3D`, azul oscuro `#0D2B52`, beige `#F6EBD7` y negro `#1A1A1A`.
-- **Tipografía:** Poppins para el texto, Lilita One para los títulos y Kaushan Script para las frases de marca.
-- **Accesibilidad:** enlace para saltar al contenido, foco visible, etiquetas en todos los campos y botones de ícono, contraste AA, `prefers-reduced-motion` y diseño adaptable a celular.
-
-Herramientas usadas para el diseño y la revisión: **impeccable** (dirección de diseño y detector de antipatrones, sin hallazgos), **emil-design-eng** (animaciones e interacción), **web-design-guidelines** (revisión de accesibilidad y buenas prácticas) y **Playwright** (capturas y grabación del video).
-
-## Tecnologías
-
-React 18 · Vite 6 · lucide-react (íconos) · @fontsource (fuentes locales) · Fetch API.
